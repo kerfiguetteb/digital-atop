@@ -1,0 +1,85 @@
+/* .row-container {
+  position: relative;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h2 {
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+/* Rangée focusée */
+/* .row-focused {
+  opacity: 1;
+  transform: scale(1);
+} */
+
+/* Rangée non focusée (dimmed) */
+/* .row-dimmed {
+  opacity: 0.5;
+  transform: scale(0.95);
+} */
+
+/* Animation pour les cards */
+.grid > div {
+  position: relative;
+}
+
+/* Assure que la card agrandie passe au-dessus */
+/* .z-30 {
+  position: relative;
+  z-index: 30;
+} */
+
+/* Overlay latéraux pour effet fade */
+.gradient-overlay-left {
+  background: linear-gradient(to right, #141414 0%, transparent 100%);
+}
+
+.gradient-overlay-right {
+  background: linear-gradient(to left, #141414 0%, transparent 100%);
+}
+
+/* Animation de focus pour les titres */
+/* h2 {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+/* Transition smooth pour le container principal */
+/* .absolute.transition-transform {
+  will-change: transform;
+} */
+
+/* Gap responsive pour la grille */
+@media (max-width: 1536px) {
+  .grid-cols-5 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1280px) {
+  .grid-cols-5 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* .row-container.row-dimmed {
+  opacity: 0.45;
+}
+
+.row-container.row-focused {
+  opacity: 1;
+}
+
+.transition-none,
+.transition-none * {
+  transition: none !important;
+}
+ */

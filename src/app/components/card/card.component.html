@@ -1,0 +1,68 @@
+@if (type() === 'play') {
+  <div class="relative w-full aspect-video">
+    <!-- Bouton Play -->
+    <div class="absolute inset-0 rounded-xl bg-linear-to-br from-red-600 to-red-800 flex flex-col items-center justify-center gap-3">
+      <!-- Icône Play -->
+      <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <span class="text-white font-bold text-lg">Lecture Auto</span>
+    </div>
+  </div>
+} @if(type() === 'video') {
+  <div class="relative w-full aspect-video">
+    <!-- Image du film -->
+    <video class="w-full h-full object-contain" controls autoplay playsinline>
+        <source [src]="data().imgUrl" type="video/mp4">
+        Votre appareil ne supporte pas la vidéo.
+    </video>
+
+    
+    <!-- Overlay gradient - s'affiche quand la card est active -->
+    <div 
+      class="absolute inset-0 rounded-xl bg-linear-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-300"
+      [class.opacity-100]="active()"
+      [class.opacity-0]="!active()"
+    ></div>
+    
+    <!-- Titre - s'affiche quand la card est active -->
+    <div 
+      class="absolute inset-0 flex items-end p-6 transition-opacity duration-300"
+      [class.opacity-100]="active()"
+      [class.opacity-0]="!active()"
+    >
+      <h3 class="text-white font-bold text-2xl drop-shadow-lg line-clamp-2">
+        {{ data().taskNom }}
+      </h3>
+    </div>
+  </div>
+}@if(type() === '') {
+    <div class="relative w-full aspect-video">
+    <!-- Image du film -->
+    <img 
+      [src]="data().imgUrl" 
+      [alt]="data().taskNom"
+      class="w-full h-full object-cover rounded-xl transition-transform duration-300"
+      [class.scale-110]="active()"
+    />
+    
+    <!-- Overlay gradient - s'affiche quand la card est active -->
+    <div 
+      class="absolute inset-0 rounded-xl bg-linear-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-300"
+      [class.opacity-100]="active()"
+      [class.opacity-0]="!active()"
+    ></div>
+    
+    <!-- Titre - s'affiche quand la card est active -->
+    <div 
+      class="absolute inset-0 flex items-end p-6 transition-opacity duration-300"
+      [class.opacity-100]="active()"
+      [class.opacity-0]="!active()"
+    >
+      <h3 class="text-white font-bold text-2xl drop-shadow-lg line-clamp-2">
+        {{ data().taskNom }}
+      </h3>
+    </div>
+  </div>
+
+}

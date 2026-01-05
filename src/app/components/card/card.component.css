@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+/* Smooth transitions pour TV */
+img {
+  will-change: transform;
+}
+
+/* Amélioration de la lisibilité du titre */
+h3 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}

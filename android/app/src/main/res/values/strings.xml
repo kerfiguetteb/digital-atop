@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">menage</string>
+    <string name="title_activity_main">menage</string>
+    <string name="package_name">fr.atop.menage</string>
+    <string name="custom_url_scheme">fr.atop.menage</string>
+</resources>

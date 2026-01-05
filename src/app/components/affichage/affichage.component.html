@@ -1,0 +1,26 @@
+<div class="absolute inset-0 w-full h-full">
+    <!-- Image plein écran -->
+    @if (type() === 'video') {
+    <video class="w-full h-full object-contain" controls autoplay playsinline>
+        <source [src]="data().imgUrl" type="video/mp4">
+        Votre appareil ne supporte pas la vidéo.
+    </video>
+
+    }@if(type() === 'menage') {
+
+
+
+        <div class="w-full h-full flex justify-center items-center p-5 ">
+            <img [src]="data().imgUrl" [alt]="data().taskNom" class="" />
+            <h3 class="text-white font-bold text-5xl drop-shadow-lg line-clamp-2">
+              {{ data().taskNom }}
+            </h3>
+        </div>
+    }
+    @if (type() === 'affiche') {
+    <img [src]="data().imgUrl" [alt]="data().taskNom" class="w-full h-full" />
+
+    }
+
+
+</div>
